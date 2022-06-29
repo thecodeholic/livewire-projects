@@ -1,19 +1,18 @@
-<x-app-layout>
-    <div class="grid grid-cols-4">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>0</button>
-        <button>/</button>
-        <button>*</button>
-        <button>+</button>
-        <button>-</button>
-        <button>=</button>
+<div class="flex flex-col items-center">
+    <div class="flex p-16 mx-auto justify-center items-center gap-4">
+        <input type="number" wire:model="number1" placeholder="Number 1">
+        <select class="w-24" wire:model="action">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+        </select>
+        <input type="number" wire:model="number2" placeholder="Number 2">
+        <button wire:click="calculate"
+                class="py-2 px-4 bg-indigo-500 hover:bg-indigo-600 disabled:cursor-not-allowed disabled:bg-opacity-90 rounded text-white"
+            {{ $disabled ? ' disabled' : ''}}>=
+        </button>
     </div>
-</x-app-layout>
+    <p class="text-3xl">{{$result}}</p>
+</div>
