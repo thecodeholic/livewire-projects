@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/calculator', \App\Http\Livewire\Calculator::class);
+Route::get('/', function () {
+    return view('welcome');
+});
