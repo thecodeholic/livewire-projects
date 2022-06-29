@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/calculator', \App\Http\Livewire\Calculator::class);
+Route::get('/todo-list', \App\Http\Livewire\TodoList::class);
