@@ -33,7 +33,15 @@ class RegisterForm extends Component
         $this->validate();
 
         // Register customer
-        dd("Create Customer");
+        session()->flash('message', 'Customer was created.');
+
+        $this->email = '';
+        $this->password = '';
+        $this->first_name = '';
+        $this->last_name = '';
+        $this->role = 'customer';
+        $this->company_name = '';
+        $this->vat_number = '';
     }
 
     public function updated($property)
