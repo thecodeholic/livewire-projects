@@ -20,3 +20,4 @@ Route::get('/calculator', \App\Http\Livewire\Calculator::class);
 Route::get('/todo-list', \App\Http\Livewire\TodoList::class);
 Route::get('/cascading-dropdown', \App\Http\Livewire\CascadingDropdown::class);
 Route::get('/products', \App\Http\Livewire\ProductsSearch::class);
+Route::get('/image-upload', \App\Http\Livewire\ImageUpload::class);
