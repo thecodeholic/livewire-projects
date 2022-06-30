@@ -4,7 +4,7 @@
             Preview:
             <div class="flex flex-wrap justify-center gap-6">
                 @foreach($image as $im)
-                    <img src="{{ $im->temporaryUrl() }}" class="w-24 h-24 object-cover">
+                    <img src="{{ $im->temporaryUrl() }}" class="w-[110x] h-[90px] object-cover">
                 @endforeach
             </div>
         @endif
